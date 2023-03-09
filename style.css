@@ -1,0 +1,35 @@
+h1 {
+    text-align: left;
+    background-color: rgb(3, 144, 144);
+    padding: 30px;
+    color: white;
+  }
+  
+  h2 {
+    color: rgb(3, 144, 144);
+    text-align: left;
+    font-size: 28px;
+  }
+  
+  h3 {
+    color: rgb(3, 144, 144);
+  }
+  
+  img {
+    box-shadow: 10px 10px 5px black;
+  }
+  
+  section {
+    background-color: rgb(3, 144, 144);
+  }
+  
+  p {
+    font-size: 15px;
+    color: darkslategray;
+  }
+  
+  ul {
+    border-style: solid;
+    color: darkslategray;
+  }
+  
