@@ -5,111 +5,105 @@
     <meta charset="UTF-8">
     <title>Latitude Analysis Landing Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Scripts -->
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+    <!-- Initial header and nav bar-->
     <h1>Latitude</h1>
     <!-- Navigation Bar after the top header-->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="comparison.html">Comparison</a>
-        <a href="data.html">Data</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="dropdownFunction()">Plots
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content" id="plotsDropdown">
-                <a href="temp.html">Max Temperature</a>
-                <a href="humidity.html">Humidity</a>
-                <a href="cloudiness.html">Cloudiness</a>
-                <a href="windspeed.html">Wind Speed</a>
+    <div class="m-4">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Home is the active page, so its class is different than the rest-->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comparison.html">Comparison</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Plots</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="temp.html">Max Temperature</a>
+                                <a class="dropdown-item" href="humidity.html">Humidity</a>
+                                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                                <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                            </div>
+                        </li>
+                    </ul>   
+                </div>
+            </nav>
+        </div>
+
+        <!-- Content sections: description of project + grid of visualizations with links to individual pages -->
+        <div class="container content">
+            <div class="row">
+                <!-- We want the content of the landing page to be smaller than the whole screen-->
+                <div class="col-md-8">
+                    <!-- We'll have two columns for the sections; the first is the descriptions-->
+                    <div class="col-md-12">
+                        <h2>Summary: Latitude vs. X</h2>
+                        <div>
+                            <img class="img-thumbnail" src="Resources/assets/images/Fig1.png" alt="Fig1">
+                        </div>
+                        <p>
+                            Welcome to my landing page for the Web Design Challenge. In this assignmeent,
+                            we were challenged to create a visualization dashboard with visualizations
+                            we've created prior to starting this challenge. In doing so, we can show off
+                            our skills in creating a website using HTML.
+                        </p>
+                        <p>
+                            The purpose of the prior assignment was to analyze how weather changes
+                            the closer you are to the equator. We gathered data using the OpenWeatherMap
+                            API as discussed in class, and created a dataset on over 500 cities.
+                        </p>
+                        <p>
+                            After creating the dataset, we used the Matplotlib library in Python to plot
+                            a number of factors of weather against the latitude of each city. Some of these
+                            factors included: temperature, cloudiness, wind speed, and humidity. I have
+                            provided the source data and visualizations I created in the previous assignment,
+                            as well as an descriptions of trends/correlations I saw in doing that assignment.
+                            You can also see these resources on my <a
+                            href="https://github.com/maplefrancake/python-api-challenge/tree/main/WeatherPy">Github repository</a>.
+                        </p>
+                    </div>
+                </div>
+                <!-- The next section is the grid of images with links to their own pages-->
+                <div class="col-md-4">
+                    <div class="col-md-12">
+                        <h2>Visualizations</h2>
+                        <div class="row">
+                            <div class="col-3 col-md-6">
+                                <a href="temp.html"><img src="Resources/assets/images/Fig1.png" width="100%" alt="temp"></a>
+                            </div>
+                            <div class="col-3 col-md-6">
+                                <a href="humidity.html"><img src="Resources/assets/images/Fig2.png" width="100%" alt="humidity"></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 col-md-6">
+                                <a href="cloudiness.html"><img src="Resources/assets/images/Fig3.png" width="100%" alt="cloudiness"></a>
+                            </div>
+                            <div class="col-3 col-md-6">
+                                <a href="windspeed.html"><img src="Resources/assets/images/Fig4.png" width="100%" alt="wind speed"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plots
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Plots
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="temp.html">Max Temperature</a>
-                        <a class="dropdown-item" href="humidity.html">Humidity</a>
-                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
-                    </div>
-                </li> -->
-                <!-- Home is the active page, so its class is different than the rest-->
-                <!--<li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="comparison.html">Comparison <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="data.html">Data</a>
-                </li>
-            </ul>
-    
-        </div>
-    </nav> -->
-    <section>
-        <!-- Header -->
-        <h2>Summary: Latitude vs. X</h2>
-
-        <!-- Description of Project-->
-        <img src="C:\Users\Frances Jay\Desktop\bootcamp repo\web-challenge\web-design-challenge\Resources\assets\images\Fig1.png" alt="Fig1">
-        <p>        
-            Welcome to my landing page for the Web Design Challenge. In this assignmeent,
-            we were challenged to create a visualization dashboard with visualizations
-            we've created prior to starting this challenge. In doing so, we can show off
-            our skills in creating a website using HTML.
-        </p>
-        <p>
-            The purpose of the prior assignment was to analyze how weather changes
-            the closer you are to the equator. We gathered data using the OpenWeatherMap
-            API as discussed in class, and created a dataset on over 500 cities.
-        </p>
-        <p>
-            After creating the dataset, we used the Matplotlib library in Python to plot
-            a number of factors of weather against the latitude of each city. Some of these
-            factors included: temperature, cloudiness, wind speed, and humidity. I have
-            provided the source data and visualizations I created in the previous assignment,
-            as well as an descriptions of trends/correlations I saw in doing that assignment.
-            You can also see these resources on my <a href="https://github.com/maplefrancake/python-api-challenge/tree/main/WeatherPy">Github repository</a>
-        </p>
-    </section>
-    <!-- Links to Visualization pages w/ preview images-->
-    <section>
-        <h2>Links to pages</h2>
-        <ul>
-            <li><a href="#">This is a placeholder for now</a></li>
-            <li><a href="#">This is a placeholder for now</a></li>
-        </ul>
-    </section>
-<script>
-    /*when user clicks on dropdown menu, show content*/
-    function dropdownFunction() {
-        document.getElementById("plotsDropdown").classList.toggle("show")
-    }
-
-    /*exit out of dropdown if click outside*/
-    window.onclick = function(e) {
-        if (!e.target.matches('.dropbtn')) {
-            var plotsDropdown = document.getElementById("plotsDropdown");
-            if (plotsDropdown.classList.contains('show')){
-                plotsDropdown.classList.remove('show');
-            }
-        }
-    }
-</script>
 </body>
 </html>

@@ -9,57 +9,19 @@ h1 {
     color: rgb(3, 144, 144);
     text-align: left;
     font-size: 28px;
-    padding: 45px;
-    }
-
-    img {
-    float: left;
-    max-width: 400px;
-    height: auto;
+    padding-left: 45px;
     }
   
     h3 {
     color: rgb(3, 144, 144);
         }
 
-/* styling navbar */
-    .navbar{
-    padding-right: 40px;
-    background-color: grey;
-    overflow: hidden;
-    text-align: right;
-    }
-
-    /*style links within nav bar */
-    .navbar a{
-        float: right;
-        font-size:medium;
-        color:lightblue;
-        text-align:right;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    /*style dropdown menu*/
-    .dropdown {
-        float:right;
-        overflow: hidden;
-    }
-
-    /*style the dropdown button*/
-    .dropdown .dropbtn {
-        font-size:medium;
-        border:none;
-        outline:none;
-        color:lightblue;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-    }
-
     /*change the background color of links that are hovered over*/
     .navbar a:hover, .dropdown:hover, .dropdown-content a:hover, .dropbtn {
         background-color: darkcyan;
+    }
+    .nav-item.active{
+        color:black;
     }
 
     .dropdown-content {
@@ -82,20 +44,29 @@ h1 {
     .dropdown:hover .dropdown-content {
         display: block;
     }
-   
-    .content {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    }
   
     p {
     font-size: 15px;
     color: darkslategray;
     text-align: justify;
+    padding-left: 45px;
+    padding-right: 45px;
     }
   
     li {
     color: darkslategray;
+    padding-left: 45px;
+    padding-right: 45px;
+    }
+
+    .img-thumbnail {
+        width: 400px;
+        float:left;
+        border:none;
+    }
+
+    img {
+        max-width: 90%;
     }
 
   /* small screen adjustments */
