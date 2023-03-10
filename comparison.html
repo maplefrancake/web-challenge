@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Latitude Analysis Comparison</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1>Comparison: Latitude vs. X</h1>
+    <!-- copy over Navigation Bar after the top header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <!-- Comparison is the active page, so its class is different than the rest-->
+                <li class="nav-item active">
+                    <a class="nav-link" href="comparison.html">Comparison <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <p>Click on any plot to get an indepth analysis</p>
+    <!-- Add all plots to a container and display in 2x2 grid-->
+    <div class="container">
+        <!-- first row contains fig1 and fig2-->
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center">vs. Max Temperature</h3>
+                <img src="C:\Users\Frances Jay\Desktop\bootcamp repo\web-challenge\web-design-challenge\Resources\assets\images\Fig1.png" alt="Fig1">
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">vs. Humidity</h3>
+                <img src="C:\Users\Frances Jay\Desktop\bootcamp repo\web-challenge\web-design-challenge\Resources\assets\images\Fig2.png" alt="Fig2">
+            </div>
+        </div>
+        <!-- second row contains fig3 and fig4-->
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center">vs. Cloudiness</h3>
+                <img src="C:\Users\Frances Jay\Desktop\bootcamp repo\web-challenge\web-design-challenge\Resources\assets\images\Fig3.png" alt="Fig3">
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">vs. Wind Speed</h3>
+                <img src="C:\Users\Frances Jay\Desktop\bootcamp repo\web-challenge\web-design-challenge\Resources\assets\images\Fig4.png" alt="Fig4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

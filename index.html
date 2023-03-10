@@ -5,39 +5,111 @@
     <meta charset="UTF-8">
     <title>Latitude Analysis Landing Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- Headers -->
     <h1>Latitude</h1>
-    <h2>Summary: Latitude vs. X</h2>
+    <!-- Navigation Bar after the top header-->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="comparison.html">Comparison</a>
+        <a href="data.html">Data</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="dropdownFunction()">Plots
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="plotsDropdown">
+                <a href="temp.html">Max Temperature</a>
+                <a href="humidity.html">Humidity</a>
+                <a href="cloudiness.html">Cloudiness</a>
+                <a href="windspeed.html">Wind Speed</a>
+            </div>
+        </div>
+    </div>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                    </div>
+                </li> -->
+                <!-- Home is the active page, so its class is different than the rest-->
+                <!--<li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+    
+        </div>
+    </nav> -->
+    <section>
+        <!-- Header -->
+        <h2>Summary: Latitude vs. X</h2>
 
-    <!-- Description of Project-->
-    <p>
-        Welcome to my landing page for the Web Design Challenge. In this assignmeent,
-        we were challenged to create a visualization dashboard with visualizations
-        we've created prior to starting this challenge. In doing so, we can show off
-        our skills in creating a website using HTML.
-    </p>
-    <p>
-        The purpose of the prior assignment was to analyze how weather changes
-        the closer you are to the equator. We gathered data using the OpenWeatherMap
-        API as discussed in class, and created a dataset on over 500 cities.
-    </p>
-    <p>
-        After creating the dataset, we used the Matplotlib library in Python to plot
-        a number of factors of weather against the latitude of each city. Some of these
-        factors included: temperature, cloudiness, wind speed, and humidity. I have
-        provided the source data and visualizations I created in the previous assignment,
-        as well as an descriptions of trends/correlations I saw in doing that assignment.
-        You can also see these resources on my
-        <a href="https://github.com/maplefrancake/python-api-challenge/tree/main/WeatherPy">Github repository</a>
-    </p>
+        <!-- Description of Project-->
+        <img src="C:\Users\Frances Jay\Desktop\bootcamp repo\web-challenge\web-design-challenge\Resources\assets\images\Fig1.png" alt="Fig1">
+        <p>        
+            Welcome to my landing page for the Web Design Challenge. In this assignmeent,
+            we were challenged to create a visualization dashboard with visualizations
+            we've created prior to starting this challenge. In doing so, we can show off
+            our skills in creating a website using HTML.
+        </p>
+        <p>
+            The purpose of the prior assignment was to analyze how weather changes
+            the closer you are to the equator. We gathered data using the OpenWeatherMap
+            API as discussed in class, and created a dataset on over 500 cities.
+        </p>
+        <p>
+            After creating the dataset, we used the Matplotlib library in Python to plot
+            a number of factors of weather against the latitude of each city. Some of these
+            factors included: temperature, cloudiness, wind speed, and humidity. I have
+            provided the source data and visualizations I created in the previous assignment,
+            as well as an descriptions of trends/correlations I saw in doing that assignment.
+            You can also see these resources on my <a href="https://github.com/maplefrancake/python-api-challenge/tree/main/WeatherPy">Github repository</a>
+        </p>
+    </section>
     <!-- Links to Visualization pages w/ preview images-->
-    <h3>Links to pages</h3>
-    <ul>
-        <li><a href="#">This is a placeholder for now</a></li>
-        <li><a href="#">This is a placeholder for now</a></li>
-    </ul>
+    <section>
+        <h2>Links to pages</h2>
+        <ul>
+            <li><a href="#">This is a placeholder for now</a></li>
+            <li><a href="#">This is a placeholder for now</a></li>
+        </ul>
+    </section>
+<script>
+    /*when user clicks on dropdown menu, show content*/
+    function dropdownFunction() {
+        document.getElementById("plotsDropdown").classList.toggle("show")
+    }
+
+    /*exit out of dropdown if click outside*/
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            var plotsDropdown = document.getElementById("plotsDropdown");
+            if (plotsDropdown.classList.contains('show')){
+                plotsDropdown.classList.remove('show');
+            }
+        }
+    }
+</script>
 </body>
 </html>

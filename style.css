@@ -3,33 +3,115 @@ h1 {
     background-color: rgb(3, 144, 144);
     padding: 30px;
     color: white;
-  }
+    }
   
-  h2 {
+    h2 {
     color: rgb(3, 144, 144);
     text-align: left;
     font-size: 28px;
-  }
+    padding: 45px;
+    }
+
+    img {
+    float: left;
+    max-width: 400px;
+    height: auto;
+    }
   
-  h3 {
+    h3 {
     color: rgb(3, 144, 144);
-  }
+        }
+
+/* styling navbar */
+    .navbar{
+    padding-right: 40px;
+    background-color: grey;
+    overflow: hidden;
+    text-align: right;
+    }
+
+    /*style links within nav bar */
+    .navbar a{
+        float: right;
+        font-size:medium;
+        color:lightblue;
+        text-align:right;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /*style dropdown menu*/
+    .dropdown {
+        float:right;
+        overflow: hidden;
+    }
+
+    /*style the dropdown button*/
+    .dropdown .dropbtn {
+        font-size:medium;
+        border:none;
+        outline:none;
+        color:lightblue;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+    }
+
+    /*change the background color of links that are hovered over*/
+    .navbar a:hover, .dropdown:hover, .dropdown-content a:hover, .dropbtn {
+        background-color: darkcyan;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: lightblue;
+        min-width: 160px;
+        z-index:1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+   
+    .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    }
   
-  img {
-    box-shadow: 10px 10px 5px black;
-  }
-  
-  section {
-    background-color: rgb(3, 144, 144);
-  }
-  
-  p {
+    p {
     font-size: 15px;
     color: darkslategray;
-  }
+    text-align: justify;
+    }
   
-  ul {
-    border-style: solid;
+    li {
     color: darkslategray;
+    }
+
+  /* small screen adjustments */
+  @media(max-width:767px){
+    .navbar.bg-light{
+        background-color: lightgrey;
+    }
+
+    .navbar-collapse{
+        background-color: aliceblue;
+    }
+
+    .navbar{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 40px;
+    }
   }
   
