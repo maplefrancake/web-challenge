@@ -14,7 +14,7 @@ h1 {
   
     h3 {
     color: rgb(3, 144, 144);
-        }
+    }
 
     /*change the background color of links that are hovered over*/
     .navbar a:hover, .dropdown:hover, .dropdown-content a:hover, .dropbtn {
